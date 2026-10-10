@@ -1,0 +1,48 @@
+free-ad5x - plan
+================
+
+Goal
+----
+Open up the FlashForge AD5X: replace FlashForge's closed programs with
+open-source ones. FlashForge's Linux stays as it is - no custom distro.
+
+The closed program to replace is firmwareExe (/usr/prog/PROGRAM/software/).
+It is the screen app, but it also runs most of the printer.
+
+What firmwareExe does (from firmwareExe 3.1.0)
+-----------------------------------------------
+
+Must replace - printer does not work without these:
+  1. Starts Klipper at boot (/usr/prog/klipper/start.sh)
+  2. Wakes the toolhead board at power-on (sends 'A' on /dev/ttyS5)
+  3. Runs printing: start / pause / resume / cancel, via Klipper's API socket
+  4. Network: brings up eth0 and Wi-Fi, saves Wi-Fi networks, hotspot mode
+  5. Power button and safe power-off
+  6. Touchscreen: all menus, screen sleep
+
+Replace if used:
+  7. IFS 4-colour unit (/dev/ttyS4): load, unload, colour change, cut, purge
+  8. Load cell weighing / crash detection (/dev/ttyS7)
+  9. Camera stream (mjpg_streamer, port 8080)
+ 10. USB stick detect and print
+ 11. Buzzer sounds
+ 12. Clock from the internet (ntpclient)
+
+FlashForge-only - drop:
+ 13. FlashForge cloud (MQTT, Alibaba OSS uploads)
+ 14. FlashPrint / Orca network printing (Moonraker covers normal slicers)
+ 15. FlashForge update system
+ 16. FlashForge calibration / setup wizards
+
+Not needed:
+ - /dev/ttyS3: FF laziness - unused air-quality sensor code from another
+   model; firmwareExe never starts it.
+
+Steps
+-----
+ 1. Startup script that does 1, 2 and 4 instead of firmwareExe.
+ 2. Current Klipper + Moonraker + web UI (Fluidd or Mainsail).
+ 3. Power button / power-off (5).
+ 4. Open-source touchscreen app (6).
+ 5. IFS, load cell, camera, USB, buzzer, clock (7-12) as needed.
+ 6. Stop firmwareExe from starting.
