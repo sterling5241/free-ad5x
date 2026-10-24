@@ -1,0 +1,76 @@
+openjdk version "25.0.5" 2026-10-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.5+8 (build 25.0.5+8-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.5+8 (build 25.0.5+8-LTS, mixed mode)
+INFO  Using log config file: jar:file:/home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/tester/.config/ghidra/ghidra_12.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/tester/.config/ghidra/ghidra_12.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (521 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Loaded 121 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt (UnixSystemTrustKeyStoreUtil)  
+INFO  Loaded 121 trusted CA certificates from the OS trust store. (DefaultTrustManagerFactory)  
+INFO  Loaded 118 trusted CA certificates from the Java default trust store. (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (1248 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 60 extension points (19 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/tester/ifs-re/scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Opening existing project: /home/tester/ifs-re/proj/ifs (HeadlessAnalyzer)  
+INFO  Opening project: /home/tester/ifs-re/proj/ifs (HeadlessProject)  
+INFO  REPORT: Processing read-only project file: /ifs.bin (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: ListRange.java '0x080133fc' '0x08013440'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /home/tester/ifs-re/scripts/ListRange.java (HeadlessAnalyzer)  
+INFO  ListRange.java> 080133fc  movs r1,#0x0 (GhidraScript)  
+INFO  ListRange.java> 080133fe  ldr r0,[0x080137dc] (GhidraScript)  
+INFO  ListRange.java> 08013400  bl 0x08019c18 (GhidraScript)  
+INFO  ListRange.java> 08013404  movs r1,#0x0 (GhidraScript)  
+INFO  ListRange.java> 08013406  ldr r0,[0x080137e0] (GhidraScript)  
+INFO  ListRange.java> 08013408  bl 0x08019c18 (GhidraScript)  
+INFO  ListRange.java> 0801340c  ldr r0,[0x080137e4] (GhidraScript)  
+INFO  ListRange.java> 0801340e  ldrb r0,[r0,#0x3] (GhidraScript)  
+INFO  ListRange.java> 08013410  lsls r0,r0,#0x3 (GhidraScript)  
+INFO  ListRange.java> 08013412  ldr r1,[0x080137e4] (GhidraScript)  
+INFO  ListRange.java> 08013414  ldrb r1,[r1,#0x2] (GhidraScript)  
+INFO  ListRange.java> 08013416  orr.w r0,r0,r1, lsl #0x2 (GhidraScript)  
+INFO  ListRange.java> 0801341a  ldr r1,[0x080137e4] (GhidraScript)  
+INFO  ListRange.java> 0801341c  ldrb r1,[r1,#0x1] (GhidraScript)  
+INFO  ListRange.java> 0801341e  orr.w r0,r0,r1, lsl #0x1 (GhidraScript)  
+INFO  ListRange.java> 08013422  ldr r1,[0x080137e4] (GhidraScript)  
+INFO  ListRange.java> 08013424  ldrb r1,[r1,#0x0] (GhidraScript)  
+INFO  ListRange.java> 08013426  orrs r0,r1 (GhidraScript)  
+INFO  ListRange.java> 08013428  ldr r1,[0x080137e8] (GhidraScript)  
+INFO  ListRange.java> 0801342a  strb r0,[r1,#0x0] (GhidraScript)  
+INFO  ListRange.java> 0801342c  ldr r0,[0x080137ec] (GhidraScript)  
+INFO  ListRange.java> 0801342e  ldrb r0,[r0,#0x3] (GhidraScript)  
+INFO  ListRange.java> 08013430  lsls r0,r0,#0x3 (GhidraScript)  
+INFO  ListRange.java> 08013432  ldr r1,[0x080137ec] (GhidraScript)  
+INFO  ListRange.java> 08013434  ldrb r1,[r1,#0x2] (GhidraScript)  
+INFO  ListRange.java> 08013436  orr.w r0,r0,r1, lsl #0x2 (GhidraScript)  
+INFO  ListRange.java> 0801343a  ldr r1,[0x080137ec] (GhidraScript)  
+INFO  ListRange.java> 0801343c  ldrb r1,[r1,#0x1] (GhidraScript)  
+INFO  ListRange.java> 0801343e  orr.w r0,r0,r1, lsl #0x1 (GhidraScript)  
+INFO  REPORT: Discarding changes to the following read-only file: /ifs.bin (HeadlessAnalyzer)  

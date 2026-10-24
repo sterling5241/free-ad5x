@@ -1,0 +1,110 @@
+openjdk version "25.0.5" 2026-10-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.5+8 (build 25.0.5+8-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.5+8 (build 25.0.5+8-LTS, mixed mode)
+INFO  Using log config file: jar:file:/home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/tester/.config/ghidra/ghidra_12.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/tester/.config/ghidra/ghidra_12.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (595 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Loaded 121 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt (UnixSystemTrustKeyStoreUtil)  
+INFO  Loaded 121 trusted CA certificates from the OS trust store. (DefaultTrustManagerFactory)  
+INFO  Loaded 118 trusted CA certificates from the Java default trust store. (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (1351 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 60 extension points (19 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /tmp
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /mnt/c/Users/sterl/Desktop/free-ad5x/ifs/iap/proj/ifsF37 (HeadlessAnalyzer)  
+INFO  Creating project: /mnt/c/Users/sterl/Desktop/free-ad5x/ifs/iap/proj/ifsF37 (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /mnt/c/Users/sterl/Desktop/free-ad5x/ifs/iap/proj/ifsF37 (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///mnt/c/Users/sterl/Desktop/free-ad5x/ifs/iap/ifsF37 (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (ProgramLoader)  
+INFO  Using Language/Compiler: MIPS:LE:32:default:default (ProgramLoader)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib64] (ProgramLoader)  
+INFO  Additional info:
+Loading file:///mnt/c/Users/sterl/Desktop/free-ad5x/ifs/iap/ifsF37?MD5=7c0e32518a22e3a351f240374f8e5dc6...
+Skipping section [.mdebug.abi32] with invalid size 0x0
+Unable to place symbol due to non-loaded section: .mdebug.abi32 - value=0x0, section=.mdebug.abi32
+_mips_gp0_value=0x4190b0
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 004110e0 (Symbol = stdin) - Runtime copy not supported (4-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 004110e4 (Symbol = stdout) - Runtime copy not supported (4-bytes)
+------------------------------------------------
+
+Linking the External Programs of 'ifsF37' to imported libraries...
+  [libc.so.6] -> not found in project
+------------------------------------------------
+
+Resolving External Symbols of [/ifsF37] - 20 unresolved symbols, no external libraries configured - skipping
+ (ProgramLoader)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///mnt/c/Users/sterl/Desktop/free-ad5x/ifs/iap/ifsF37 (HeadlessAnalyzer)  
+INFO  Unable to find DWARF information, skipping DWARF analysis (DWARFAnalyzer)  
+INFO  Packed database cache: /var/tmp/tester-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: generic_clib (ApplyDataArchiveAnalyzer)  
+INFO  -----------------------------------------------------
+    ASCII Strings                              0.167 secs
+    Apply Data Archives                        0.448 secs
+    Call Convention ID                         0.220 secs
+    Call-Fixup Installer                       0.003 secs
+    Create Address Tables                      0.002 secs
+    Create Function                            0.008 secs
+    DWARF                                      0.002 secs
+    Data Reference                             0.007 secs
+    Decompiler Switch Analysis                 0.472 secs
+    Demangler GNU                              0.019 secs
+    Disassemble Entry Points                   0.074 secs
+    Embedded Media                             0.005 secs
+    External Entry References                  0.000 secs
+    Function ID                                0.014 secs
+    Function Start Search                      0.039 secs
+    GCC Exception Handlers                     0.014 secs
+    MIPS Constant Reference Analyzer           0.055 secs
+    MIPS Symbol                                0.001 secs
+    MIPS UnAlligned Instruction Fix            0.002 secs
+    Non-Returning Functions - Discovered       0.002 secs
+    Non-Returning Functions - Known            0.001 secs
+    Reference                                  0.009 secs
+    Shared Return Calls                        0.005 secs
+    Source Language Support                    0.002 secs
+    Stack                                      0.033 secs
+    Subroutine References                      0.002 secs
+    Subroutine References - One Time           0.000 secs
+    Variadic Function Signature Override       1.267 secs
+-----------------------------------------------------
+     Total Time   2 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: file:///mnt/c/Users/sterl/Desktop/free-ad5x/ifs/iap/ifsF37 (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: ExportAll.java '/mnt/c/Users/sterl/Desktop/free-ad5x/ifs/iap/ifsF37.c'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /tmp/ExportAll.java (HeadlessAnalyzer)  
+INFO  ANALYZING changes made by post scripts: file:///mnt/c/Users/sterl/Desktop/free-ad5x/ifs/iap/ifsF37 (HeadlessAnalyzer)  
+INFO  REPORT: Post-analysis succeeded for file: file:///mnt/c/Users/sterl/Desktop/free-ad5x/ifs/iap/ifsF37 (HeadlessAnalyzer)  
+INFO  /ifsF37: file created (tester) (LocalFileSystem)  
+INFO  REPORT: Save succeeded for: /ifsF37 (ifsF37:/ifsF37) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  

@@ -1,0 +1,338 @@
+openjdk version "25.0.5" 2026-10-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.5+8 (build 25.0.5+8-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.5+8 (build 25.0.5+8-LTS, mixed mode)
+INFO  Using log config file: jar:file:/home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/tester/.config/ghidra/ghidra_12.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/tester/.config/ghidra/ghidra_12.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (530 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Loaded 121 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt (UnixSystemTrustKeyStoreUtil)  
+INFO  Loaded 121 trusted CA certificates from the OS trust store. (DefaultTrustManagerFactory)  
+INFO  Loaded 118 trusted CA certificates from the Java default trust store. (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (1594 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 60 extension points (19 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /mnt/c/Users/sterl/Desktop/free-ad5x/loadcell/proj/fw (HeadlessAnalyzer)  
+INFO  Creating project: /mnt/c/Users/sterl/Desktop/free-ad5x/loadcell/proj/fw (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /mnt/c/Users/sterl/Desktop/free-ad5x/loadcell/proj/fw (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///mnt/c/Users/sterl/Desktop/free-ad5x/loadcell/firmwareExe (HeadlessAnalyzer)  
+WARN  131 NOP constructors found (SleighCompile)  
+WARN  Use -n switch to list each individually (SleighCompile)  
+WARN  211 unnecessary extensions/truncations were converted to copies (SleighCompile)  
+WARN  Use -u switch to list each individually (SleighCompile)  
+WARN  mips.sinc:902: Unreferenced table: 'S18L3' (SleighCompile)  
+WARN  mips.sinc:905: Unreferenced table: 'S16L32' (SleighCompile)  
+WARN  mips.sinc:906: Unreferenced table: 'S16L48' (SleighCompile)  
+WARN  mipsmicro.sinc:286: Unreferenced table: 'RS0R5' (SleighCompile)  
+WARN  mipsmicro.sinc:307: Unreferenced table: 'RT5RD5' (SleighCompile)  
+WARN  mipsmicro.sinc:382: Unreferenced table: 'EXT_MS18' (SleighCompile)  
+WARN  mipsmicro.sinc:387: Unreferenced table: 'EXT_MS48' (SleighCompile)  
+WARN  mipsmicro.sinc:388: Unreferenced table: 'EXT_MS64' (SleighCompile)  
+WARN  mipsmicro.sinc:410: Unreferenced table: 'SIZEPLG' (SleighCompile)  
+WARN  mipsmicro.sinc:412: Unreferenced table: 'SIZEQLG' (SleighCompile)  
+WARN  mipsmicro.sinc:413: Unreferenced table: 'POSHI' (SleighCompile)  
+WARN  mipsmicro.sinc:424: Unreferenced table: 'SA32' (SleighCompile)  
+INFO  Using Loader: Executable and Linking Format (ELF) (ProgramLoader)  
+INFO  Using Language/Compiler: MIPS:LE:32:default:default (ProgramLoader)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib64] (ProgramLoader)  
+INFO  Additional info:
+Loading file:///mnt/c/Users/sterl/Desktop/free-ad5x/loadcell/firmwareExe?MD5=53002874d76d1b381e45d4b533884408...
+Skipping section [.mdebug.abi32] with invalid size 0x0
+Unsupported Thread-Local Symbol not loaded: _ZSt11__once_call
+Unsupported Thread-Local Symbol not loaded: _ZSt15__once_callable
+Unable to place symbol due to non-loaded section: .mdebug.abi32 - value=0x0, section=.mdebug.abi32
+Unsupported Thread-Local Symbol not loaded: _ZSt11__once_call@@GLIBCXX_3.4.11
+Unsupported Thread-Local Symbol not loaded: _ZSt15__once_callable@@GLIBCXX_3.4.11
+_mips_gp0_value=0xe1ae60
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1bf60 (Symbol = _ZTVSo) - Runtime copy not supported (40-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1bf88 (Symbol = _ZTI7QWidget) - Runtime copy not supported (32-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1bfa8 (Symbol = _ZTVN10__cxxabiv119__pointer_type_infoE) - Runtime copy not supported (36-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1bfcc (Symbol = _ZTTSt13basic_fstreamIcSt11char_traitsIcEE) - Runtime copy not supported (40-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1bff8 (Symbol = _ZN11QMainWindow16staticMetaObjectE) - Runtime copy not supported (16-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c008 (Symbol = _ZTVN10__cxxabiv121__vmi_class_type_infoE) - Runtime copy not supported (44-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c034 (Symbol = _ZTVNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEEE) - Runtime copy not supported (64-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c074 (Symbol = _ZTVSt9exception) - Runtime copy not supported (20-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c088 (Symbol = _ZTISt9exception) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c090 (Symbol = _ZTI11QMainWindow) - Runtime copy not supported (12-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c09c (Symbol = _ZTVSt13basic_fstreamIcSt11char_traitsIcEE) - Runtime copy not supported (60-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c0d8 (Symbol = _ZTTSt14basic_ofstreamIcSt11char_traitsIcEE) - Runtime copy not supported (16-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c0e8 (Symbol = _ZTVN10__cxxabiv117__class_type_infoE) - Runtime copy not supported (44-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c114 (Symbol = _ZTISt16invalid_argument) - Runtime copy not supported (12-bytes)
+ELF Relocation Warning: Type = 38 (0x26) at 00e1bf30 (Symbol = _ZSt11__once_call) - Relocation for TLS Symbol not supported
+ELF Relocation Warning: Type = 39 (0x27) at 00e1bf34 (Symbol = _ZSt11__once_call) - Relocation for TLS Symbol not supported
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c120 (Symbol = _ZSt4cout) - Runtime copy not supported (140-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c1b0 (Symbol = _ZTI12QApplication) - Runtime copy not supported (12-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c1bc (Symbol = _ZTVN10__cxxabiv120__function_type_infoE) - Runtime copy not supported (32-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c1dc (Symbol = _ZN12QApplication16staticMetaObjectE) - Runtime copy not supported (16-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c1ec (Symbol = _ZTVSt16invalid_argument) - Runtime copy not supported (20-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c200 (Symbol = _ZTVSt14basic_ifstreamIcSt11char_traitsIcEE) - Runtime copy not supported (40-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c228 (Symbol = _ZN7QObject16staticMetaObjectE) - Runtime copy not supported (16-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c238 (Symbol = _ZN7QDialog16staticMetaObjectE) - Runtime copy not supported (16-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c248 (Symbol = _ZTVNSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEEE) - Runtime copy not supported (40-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c270 (Symbol = _ZTI7QObject) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c278 (Symbol = _ZTVNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE) - Runtime copy not supported (60-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c2c0 (Symbol = _ZN10QTextCodec4cftrE) - Runtime copy not supported (4-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c2c8 (Symbol = stderr) - Runtime copy not supported (4-bytes)
+ELF Relocation Warning: Type = 38 (0x26) at 00e1bf28 (Symbol = _ZSt15__once_callable) - Relocation for TLS Symbol not supported
+ELF Relocation Warning: Type = 39 (0x27) at 00e1bf2c (Symbol = _ZSt15__once_callable) - Relocation for TLS Symbol not supported
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c2cc (Symbol = _ZTVN10__cxxabiv120__si_class_type_infoE) - Runtime copy not supported (44-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c2f8 (Symbol = _ZTISt5ctypeIcE) - Runtime copy not supported (32-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c318 (Symbol = _ZTINSt6thread6_StateE) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c320 (Symbol = _ZTVSt15basic_streambufIcSt11char_traitsIcEE) - Runtime copy not supported (64-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c360 (Symbol = _ZTISt11regex_error) - Runtime copy not supported (12-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c36c (Symbol = _ZN7QString11shared_nullE) - Runtime copy not supported (20-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c380 (Symbol = _ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE) - Runtime copy not supported (40-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c3a8 (Symbol = _ZTVSt14basic_ofstreamIcSt11char_traitsIcEE) - Runtime copy not supported (40-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c3d0 (Symbol = _ZN8QMapData11shared_nullE) - Runtime copy not supported (72-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c418 (Symbol = _ZTTSt14basic_ifstreamIcSt11char_traitsIcEE) - Runtime copy not supported (16-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c428 (Symbol = _ZTVSt9basic_iosIcSt11char_traitsIcEE) - Runtime copy not supported (16-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c438 (Symbol = _ZTINSt6locale5facetE) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c440 (Symbol = _ZTISt13runtime_error) - Runtime copy not supported (12-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c44c (Symbol = _ZN10QByteArray11shared_nullE) - Runtime copy not supported (20-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c460 (Symbol = _ZN7QString16codecForCStringsE) - Runtime copy not supported (4-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c464 (Symbol = _ZTTNSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEEE) - Runtime copy not supported (16-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c474 (Symbol = stdout) - Runtime copy not supported (4-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c478 (Symbol = _ZN22QGraphicsOpacityEffect16staticMetaObjectE) - Runtime copy not supported (16-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c488 (Symbol = _ZSt4cerr) - Runtime copy not supported (140-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c514 (Symbol = _ZTVSt13basic_filebufIcSt11char_traitsIcEE) - Runtime copy not supported (64-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c554 (Symbol = _ZNSt5ctypeIcE2idE) - Runtime copy not supported (4-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c558 (Symbol = _ZTISt15basic_streambufIcSt11char_traitsIcEE) - Runtime copy not supported (8-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c560 (Symbol = _ZTI7QDialog) - Runtime copy not supported (12-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c56c (Symbol = _ZTVSt11regex_error) - Runtime copy not supported (20-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c580 (Symbol = _ZN9QListData11shared_nullE) - Runtime copy not supported (24-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c598 (Symbol = _ZTISt11logic_error) - Runtime copy not supported (12-bytes)
+ELF Relocation Failure: R_MIPS_COPY (126, 0x7e) at 00e1c5a8 (Symbol = _ZN7QWidget16staticMetaObjectE) - Runtime copy not supported (16-bytes)
+ELF data markup conflict while applying pointer at 00e12194
+ELF data markup conflict while applying pointer at 00e12198
+ELF data markup conflict while applying pointer at 00e1219c
+------------------------------------------------
+
+Linking the External Programs of 'firmwareExe' to imported libraries...
+  [libz.so.1] -> not found in project
+  [libssl.so.1.0.0] -> not found in project
+  [libcrypto.so.1.0.0] -> not found in project
+  [libcurl.so.4] -> not found in project
+  [libavutil.so.56] -> not found in project
+  [libavformat.so.58] -> not found in project
+  [libavcodec.so.58] -> not found in project
+  [libavdevice.so.58] -> not found in project
+  [libavfilter.so.7] -> not found in project
+  [libpostproc.so.55] -> not found in project
+  [libswresample.so.3] -> not found in project
+  [libswscale.so.5] -> not found in project
+  [libx264.so.148] -> not found in project
+  [libzip.so.5] -> not found in project
+  [libnim.so] -> not found in project
+  [libnim_chatroom.so] -> not found in project
+  [libQtGui.so.4] -> not found in project
+  [libQtNetwork.so.4] -> not found in project
+  [libQtCore.so.4] -> not found in project
+  [libts.so.0] -> not found in project
+  [libpthread.so.0] -> not found in project
+  [libstdc++.so.6] -> not found in project
+  [libm.so.6] -> not found in project
+  [libgcc_s.so.1] -> not found in project
+  [libc.so.6] -> not found in project
+  [ld-linux-mipsn8.so.1] -> not found in project
+------------------------------------------------
+
+Resolving External Symbols of [/firmwareExe] - 1307 unresolved symbols, no external libraries configured - skipping
+ (ProgramLoader)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///mnt/c/Users/sterl/Desktop/free-ad5x/loadcell/firmwareExe (HeadlessAnalyzer)  
+INFO  Added 6178 source map entries (DWARFImporter)  
+INFO  DWARF ver[5], 9 compUnits, 3542 DIES, import - total elapsed: 291ms (DWARFImportSummary)  
+INFO  DWARF data type import - elapsed: 34ms (DWARFImportSummary)  
+INFO  DWARF func & symbol import - elapsed: 115ms (DWARFImportSummary)  
+INFO  DWARF types imported: 89 (DWARFImportSummary)  
+INFO  DWARF enums from macros - elapsed: 1ms (DWARFImportSummary)  
+INFO  DWARF compile dirs: [/opt/ADMU/tools/qrencode-4.0.2] (DWARFImportSummary)  
+INFO  DWARF producers: [GNU C17 12.1.0 -mel -march=mips32r2 -mabi=32 -mhard-float -mdouble-float -mnan=2008 -mfp64 -modd-spreg -mdivide-traps -mllsc -mplt -msynci -mno-madd4 -mips32r2 -mno-shared -g -O2] (DWARFImportSummary)  
+INFO  DWARF source languages: [DW_LANG_C11] (DWARFImportSummary)  
+INFO  DWARF compUnit: qrencode.c (DWARFImportSummary)  
+INFO  DWARF compUnit: qrinput.c (DWARFImportSummary)  
+INFO  DWARF compUnit: bitstream.c (DWARFImportSummary)  
+INFO  DWARF compUnit: qrspec.c (DWARFImportSummary)  
+INFO  DWARF compUnit: rsecc.c (DWARFImportSummary)  
+INFO  DWARF compUnit: split.c (DWARFImportSummary)  
+INFO  DWARF compUnit: mask.c (DWARFImportSummary)  
+INFO  DWARF compUnit: mqrspec.c (DWARFImportSummary)  
+INFO  DWARF compUnit: mmask.c (DWARFImportSummary)  
+ERROR DWARF un-recoverable expressions: (DWARFImportSummary)  
+ERROR   DW_OP_reg23 -> 1 (DWARFImportSummary)  
+ERROR   DW_OP_reg7 -> 16 (DWARFImportSummary)  
+ERROR   DW_OP_breg4; DW_OP_lit2; DW_OP_shl; DW_OP_breg5; DW_OP_plus; DW_OP_lit1; DW_OP_minus; DW_OP_lit2; DW_OP_shl; DW_OP_addr; DW_OP_plus -> 1 (DWARFImportSummary)  
+ERROR   DW_OP_lit1; DW_OP_stack_value -> 1 (DWARFImportSummary)  
+ERROR   DW_OP_reg4 -> 100 (DWARFImportSummary)  
+ERROR   DW_OP_const4u; DW_OP_stack_value -> 1 (DWARFImportSummary)  
+ERROR   DW_OP_lit0; DW_OP_stack_value -> 35 (DWARFImportSummary)  
+ERROR   DW_OP_reg5 -> 68 (DWARFImportSummary)  
+ERROR   DW_OP_breg4; DW_OP_lit20; DW_OP_mul; DW_OP_addr; DW_OP_plus; DW_OP_deref; DW_OP_lit1; DW_OP_minus; DW_OP_stack_value -> 1 (DWARFImportSummary)  
+ERROR   DW_OP_breg4; DW_OP_lit2; DW_OP_div; DW_OP_stack_value -> 1 (DWARFImportSummary)  
+ERROR   DW_OP_reg6 -> 45 (DWARFImportSummary)  
+WARN  Decompiling 007ff654, pcode error at 00ea2640: Unable to disassemble EXTERNAL block location: 00ea2640 (DecompileCallback)  
+WARN  Decompiling 00886208, pcode error at 0088641c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00791fec, pcode error at 007921b0: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 007f5034, pcode error at 00ea2640: Unable to disassemble EXTERNAL block location: 00ea2640 (DecompileCallback)  
+WARN  Decompiling 007f5034, pcode error at 00ea2dac: Unable to disassemble EXTERNAL block location: 00ea2dac (DecompileCallback)  
+WARN  Decompiling 007f3564, pcode error at 00ea2dac: Unable to disassemble EXTERNAL block location: 00ea2dac (DecompileCallback)  
+WARN  Decompiling 00886964, pcode error at 00886b18: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00800aa4, pcode error at 00ea2dac: Unable to disassemble EXTERNAL block location: 00ea2dac (DecompileCallback)  
+WARN  Decompiling 007f8584, pcode error at 00ea2640: Unable to disassemble EXTERNAL block location: 00ea2640 (DecompileCallback)  
+WARN  Decompiling 007f5e44, pcode error at 00ea2640: Unable to disassemble EXTERNAL block location: 00ea2640 (DecompileCallback)  
+WARN  Decompiling 00800924, pcode error at 00ea2640: Unable to disassemble EXTERNAL block location: 00ea2640 (DecompileCallback)  
+WARN  Decompiling 007f40f4, pcode error at 00ea2640: Unable to disassemble EXTERNAL block location: 00ea2640 (DecompileCallback)  
+WARN  Decompiling 007f40f4, pcode error at 00ea2dac: Unable to disassemble EXTERNAL block location: 00ea2dac (DecompileCallback)  
+WARN  Decompiling 00887378, pcode error at 0088741c: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00802264, pcode error at 00ea2640: Unable to disassemble EXTERNAL block location: 00ea2640 (DecompileCallback)  
+WARN  Decompiling 008871c4, pcode error at 008872a0: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 007f3754, pcode error at 00ea2640: Unable to disassemble EXTERNAL block location: 00ea2640 (DecompileCallback)  
+WARN  Decompiling 007f3754, pcode error at 00ea2dac: Unable to disassemble EXTERNAL block location: 00ea2dac (DecompileCallback)  
+WARN  Decompiling 00885418, pcode error at 00885550: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00884ef8, pcode error at 00885064: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0098103c, pcode error at 0098125c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0098103c, pcode error at 0098125c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00981884, pcode error at 0098196c: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00981884, pcode error at 0098196c: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00a87814, pcode error at 00ea272c: Unable to disassemble EXTERNAL block location: 00ea272c (DecompileCallback)  
+WARN  Decompiling 00a84424, pcode error at 00ea272c: Unable to disassemble EXTERNAL block location: 00ea272c (DecompileCallback)  
+WARN  Decompiling 00a88110, pcode error at 00ea299c: Unable to disassemble EXTERNAL block location: 00ea299c (DecompileCallback)  
+WARN  Decompiling 0097fbac, pcode error at 0097fcd8: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00a83a70, pcode error at 00ea272c: Unable to disassemble EXTERNAL block location: 00ea272c (DecompileCallback)  
+WARN  Decompiling 0097fbac, pcode error at 0097fcd8: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00a9ca68, pcode error at 00ea25b4: Unable to disassemble EXTERNAL block location: 00ea25b4 (DecompileCallback)  
+WARN  Decompiling 00ac68e0, pcode error at 00ea2be4: Unable to disassemble EXTERNAL block location: 00ea2be4 (DecompileCallback)  
+WARN  Decompiling 0097f610, pcode error at 0097f784: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00ac5438, pcode error at 00ea2504: Unable to disassemble EXTERNAL block location: 00ea2504 (DecompileCallback)  
+WARN  Decompiling 00ab90bc, pcode error at 00ea2d08: Unable to disassemble EXTERNAL block location: 00ea2d08 (DecompileCallback)  
+WARN  Decompiling 0097f610, pcode error at 0097f784: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00981a1c, pcode error at 00981aec: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00981a1c, pcode error at 00981aec: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00a9c774, pcode error at 00ea299c: Unable to disassemble EXTERNAL block location: 00ea299c (DecompileCallback)  
+WARN  Decompiling 00a8ede0, pcode error at 00ea272c: Unable to disassemble EXTERNAL block location: 00ea272c (DecompileCallback)  
+WARN  Decompiling 00a93780, pcode error at 00ea2be4: Unable to disassemble EXTERNAL block location: 00ea2be4 (DecompileCallback)  
+WARN  Decompiling 00ac0590, pcode error at 00ea2d08: Unable to disassemble EXTERNAL block location: 00ea2d08 (DecompileCallback)  
+WARN  Decompiling 00980974, pcode error at 00980c1c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00980974, pcode error at 00980c1c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00ac0684, pcode error at 00ea2d08: Unable to disassemble EXTERNAL block location: 00ea2d08 (DecompileCallback)  
+INFO  Packed database cache: /var/tmp/tester-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: generic_clib (ApplyDataArchiveAnalyzer)  
+INFO  Applied data type archive: generic_clib (ApplyDataArchiveAnalyzer)  
+WARN  Unable to fully apply external demangled Address Table at 00ea32c8: std::future_error::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00ea333c: std::bad_cast::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00ea3410: std::bad_cast::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00ea341c: std::thread::_State::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00ea3484: std::__future_base::_Result_base::typeinfo (DemangledAddressTable)  
+INFO  Applied data type archive: generic_clib (ApplyDataArchiveAnalyzer)  
+WARN  Decompiling 007038bc, pcode error at 00703914: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0088a6a0, pcode error at 0088a6fc: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0088278c, pcode error at 008827e8: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00981884, pcode error at 0098196c: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00981884, pcode error at 0098196c: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 008ad8ec, pcode error at 008ad958: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00985018, pcode error at 00985158: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00985208, pcode error at 00985300: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 009853a8, pcode error at 0098545c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0097d490, pcode error at 0097d4ec: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0098550c, pcode error at 009855c8: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0069d5a8, pcode error at 0069d5f8: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00985670, pcode error at 009856fc: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00788918, pcode error at 00788a08: Failed to resolve varnode <ftD>, index=3 (DecompileCallback)  
+WARN  Decompiling 005ecb74, pcode error at 005ecbd4: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00984ef4, pcode error at 00984f6c: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 007886f4, pcode error at 00788724: Failed to resolve varnode <ftD>, index=3 (DecompileCallback)  
+WARN  Decompiling 007887e8, pcode error at 00788818: Failed to resolve varnode <ftD>, index=3 (DecompileCallback)  
+WARN  Decompiling 0051a3f8, pcode error at 0051a4f8: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00987884, pcode error at 00987a50: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00987884, pcode error at 00987a50: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0088c8b0, pcode error at 0088c910: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00990a64, pcode error at 00990ae4: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0088a994, pcode error at 0088aa80: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0088ab18, pcode error at 0088abc0: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0088ac60, pcode error at 0088ad10: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 008871c4, pcode error at 008872a0: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0088a7c0, pcode error at 0088a8f4: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0088ada8, pcode error at 0088ae28: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0098103c, pcode error at 0098125c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0098103c, pcode error at 0098125c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00980974, pcode error at 00980c1c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00980974, pcode error at 00980c1c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00886208, pcode error at 0088641c: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00886964, pcode error at 00886b18: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00895960, pcode error at 00895a24: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 0064e164, pcode error at 0064e250: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00981a1c, pcode error at 00981aec: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00981a1c, pcode error at 00981aec: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00887378, pcode error at 0088741c: Failed to resolve varnode <fdD>, index=1 (DecompileCallback)  
+WARN  Decompiling 006042e4, pcode error at 00608248: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00798b2c, pcode error at 007990a4: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00791fec, pcode error at 007921b0: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00895960, pcode error at 00895a24: Failed to resolve varnode <fsD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00987884, pcode error at 00987a50: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+WARN  Decompiling 00987884, pcode error at 00987a50: Failed to resolve varnode <ftD>, index=1 (DecompileCallback)  
+INFO  -----------------------------------------------------
+    ASCII Strings                              0.633 secs
+    Apply Data Archives                        0.560 secs
+    Call Convention ID                        30.968 secs
+    Call-Fixup Installer                       0.567 secs
+    Create Address Tables                      1.639 secs
+    Create Address Tables - One Time           2.600 secs
+    Create Function                            0.117 secs
+    DWARF                                      0.426 secs
+    Data Reference                             4.263 secs
+    Decompiler Switch Analysis                 7.613 secs
+    Demangler GNU                             17.343 secs
+    Disassemble                                0.001 secs
+    Disassemble Entry Points                   9.459 secs
+    Embedded Media                             0.036 secs
+    External Entry References                  0.146 secs
+    Function ID                                0.021 secs
+    Function Start Search                      0.668 secs
+    GCC Exception Handlers                    16.641 secs
+    MIPS Constant Reference Analyzer          51.280 secs
+    MIPS Symbol                                1.344 secs
+    MIPS UnAlligned Instruction Fix            0.575 secs
+    Non-Returning Functions - Discovered       5.357 secs
+    Non-Returning Functions - Known            0.045 secs
+    Reference                                  3.257 secs
+    Shared Return Calls                        1.715 secs
+    Source Language Support                    0.028 secs
+    Stack                                     34.214 secs
+    Subroutine References                      2.850 secs
+    Subroutine References - One Time           0.001 secs
+    Variadic Function Signature Override       7.312 secs
+-----------------------------------------------------
+     Total Time   201 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: file:///mnt/c/Users/sterl/Desktop/free-ad5x/loadcell/firmwareExe (HeadlessAnalyzer)  
+INFO  /firmwareExe: file created (tester) (LocalFileSystem)  
+INFO  REPORT: Save succeeded for: /firmwareExe (fw:/firmwareExe) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  

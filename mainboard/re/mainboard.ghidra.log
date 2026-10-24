@@ -1,0 +1,100 @@
+openjdk version "25.0.5" 2026-10-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.5+8 (build 25.0.5+8-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.5+8 (build 25.0.5+8-LTS, mixed mode)
+INFO  Using log config file: jar:file:/home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /home/tester/.config/ghidra/ghidra_12.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /home/tester/.config/ghidra/ghidra_12.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (613 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Loaded 121 trusted CA certificate(s) from /etc/ssl/certs/ca-certificates.crt (UnixSystemTrustKeyStoreUtil)  
+INFO  Loaded 121 trusted CA certificates from the OS trust store. (DefaultTrustManagerFactory)  
+INFO  Loaded 118 trusted CA certificates from the Java default trust store. (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (2423 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 224 extension points (115 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/Swift/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /home/tester/ghidra/ghidra_12.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/proj/mainboard (HeadlessAnalyzer)  
+INFO  Creating project: /mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/proj/mainboard (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/proj/mainboard (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/mainboard.bin (HeadlessAnalyzer)  
+INFO  Successfully applied "-loader-baseAddr" to "Base Address" (old: "null", new: "0x08000000") (ProgramLoader)  
+INFO  Using Loader: Raw Binary (ProgramLoader)  
+INFO  Using Language/Compiler: ARM:LE:32:Cortex:default (ProgramLoader)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib64] (ProgramLoader)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/mainboard.bin (HeadlessAnalyzer)  
+INFO  Packed database cache: /var/tmp/tester-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: generic_clib (ApplyDataArchiveAnalyzer)  
+WARN  Decompiling 08006b9c, pcode error at fffffff8: Could not follow disassembly flow into non-existing memory at fffffff8 (DecompileCallback)  
+INFO  -----------------------------------------------------
+    ARM Constant Reference Analyzer            0.357 secs
+    ARM Symbol                                 0.000 secs
+    ASCII Strings                              0.135 secs
+    Apply Data Archives                        0.326 secs
+    Call-Fixup Installer                       0.000 secs
+    Create Address Tables                      0.004 secs
+    Create Address Tables - One Time           0.097 secs
+    Create Function                            0.051 secs
+    Data Reference                             0.089 secs
+    Decompiler Switch Analysis                 0.932 secs
+    Demangler GNU                              0.001 secs
+    Disassemble                                0.292 secs
+    Disassemble Entry Points                   0.001 secs
+    Embedded Media                             0.010 secs
+    External Entry References                  0.001 secs
+    Function ID                                0.024 secs
+    Function Start Pre Search                  0.008 secs
+    Function Start Search                      0.062 secs
+    Function Start Search After Code           0.024 secs
+    Function Start Search After Data           0.004 secs
+    Function Start Search delayed - One Time   0.008 secs
+    Non-Returning Functions - Discovered       0.166 secs
+    Reference                                  0.317 secs
+    Shared Return Calls                        0.017 secs
+    Source Language Support                    0.001 secs
+    Stack                                      0.151 secs
+    Subroutine References                      0.207 secs
+    Subroutine References - One Time           0.000 secs
+-----------------------------------------------------
+     Total Time   3 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: file:///mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/mainboard.bin (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: ExportDecomp.java '/mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/mainboard.c' '0x08000000'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/scripts/ExportDecomp.java (HeadlessAnalyzer)  
+INFO  Applied data type archive: generic_clib (ApplyDataArchiveAnalyzer)  
+INFO  No functions detected that make variadic function calls with format strings containing format specifiers (FormatStringAnalyzer)  
+WARN  Decompiling 08006b9c, pcode error at fffffff8: Could not follow disassembly flow into non-existing memory at fffffff8 (DecompileCallback)  
+INFO  ExportDecomp.java> functions: 234 (GhidraScript)  
+INFO  ANALYZING changes made by post scripts: file:///mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/mainboard.bin (HeadlessAnalyzer)  
+INFO  REPORT: Post-analysis succeeded for file: file:///mnt/c/Users/sterl/Desktop/free-ad5x/mainboard/re/mainboard.bin (HeadlessAnalyzer)  
+INFO  /mainboard.bin: file created (tester) (LocalFileSystem)  
+INFO  REPORT: Save succeeded for: /mainboard.bin (mainboard:/mainboard.bin) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  

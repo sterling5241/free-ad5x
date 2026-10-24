@@ -1,0 +1,11 @@
+0079cb14 gpio_export
+0079cc34 gpio_unexport
+0079cd54 gpio_set_direction
+0079ce64 gpio_set_value
+0079cf70 gpio_get_value
+0079d06c gpio_set_edge
+0079d184 gpio_open
+0079d200 gpio_close
+0079d230 gpio_read
+0079d2d0 gpio_write
+0079d420 gpio_out
