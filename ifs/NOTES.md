@@ -262,7 +262,7 @@ Photos: `free-ad5x/ifs/board/ifs1.jpg` (back), `ifs2.jpg` (front), from 3dprima.
 ## Purge chute moves (2026-10-24)
 
 - Stock enters and leaves the chute along Y only: `printClearGoPos` / `clear_go_pos` = `G1 X52.5`, `G1 Y220 F12000`, `G1 Y229/230.5` (F3000 in clear_go_pos); `clear_brush` = `G1 Y220 F3000`, `G1 X78 F12000`, `G1 Y230.5`, X65/X73/X65/X73/X65, `G1 X78`, `G1 Y220`. AFC's Park/Poop/Brush macros move diagonally in one `G1 X.. Y..` (no approach option) and can catch the chute walls
-- In `AFC_IFS.py`: `AD5X_PARK`, `AD5X_POOP` (park, then `AFC_POOP` with the same parameters), `AD5X_BRUSH` (stock wipe, ends at Y220 out of the chute). Options with stock defaults: `chute_x` 52.5, `chute_y` 230.5, `chute_y_out` 220, `brush_x_min` 65, `brush_x_max` 73, `brush_x_out` 78, `brush_count` 2. At connect the unit sets AFC's `park_cmd` / `poop_cmd` / `wipe_cmd` to these, only where AFC.cfg still has the AFC defaults; AFC.cfg stays upstream
+- In `AFC_IFS.py`: `ADX_PARK`, `ADX_POOP` (park, then `AFC_POOP` with the same parameters), `ADX_BRUSH` (stock wipe, ends at Y220 out of the chute). Options with stock defaults: `chute_x` 52.5, `chute_y` 230.5, `chute_y_out` 220, `brush_x_min` 65, `brush_x_max` 73, `brush_x_out` 78, `brush_count` 2. At connect the unit sets AFC's `park_cmd` / `poop_cmd` / `wipe_cmd` to these, only where AFC.cfg still has the AFC defaults; AFC.cfg stays upstream
 - AFC order: unload = cut, park; load = poop, wipe (kick off), wipe
 - Checked against AFC: no built-in chute approach, no analog toolhead sensor (ADC only for the FPS buffer), `direct_load` loads to the nozzle on insert (stock parks), HTLF assumes home = no lane pressed (IFS home = slot 1)
 - Selector speed 140 deg/s accel 400 (2026-10-24): A/B listening test, 90 deg/s was rough/loud (resonance), 140 = stock's TIM6 step rate sounded like stock
@@ -283,3 +283,21 @@ Photos: `free-ad5x/ifs/board/ifs1.jpg` (back), `ifs2.jpg` (front), from 3dprima.
 - Cause: AFC `handle_activate_extruder` (and prep, load, unload) enables the lane drive and `sync_to_extruder`s it. IFS_Drive at stock IRUN 9 / IHOLD 0 (freewheel 0 = coils shorted at standstill) held the clamped lane back and the extruder slipped. With IFS_Drive disabled, E30 and E100 came out fine
 - Stock keeps the feed motor off (EN high) while printing, the extruder pulls through the clamped lane
 - `AFC_IFS.handle_connect`: the drive stepper's `sync_to_extruder` now disables the motor instead (AFC has no option for this). Feed moves (`lane.move`) still enable it as before
+
+## Command names with digits never dispatch (2026-10-25)
+
+- First T1 (lane 1 -> lane 2) failed at the unload: the console showed `Unknown command:"AD5"` twice where AFC called the cut and park, so the head never moved to the cutter and the retracts pulled an uncut strand
+- Klipper's G-code parser (`gcode.py` `args_r = ([A-Z_]+|[A-Z*])`) takes the command as the first letter run plus the digits after it, so `AD5X_CUT` is read as `AD5`. The commands were registered (visible in HELP) but could not be invoked by name. Macro and command names must be letters and underscores only
+- Renamed `AD5X_PARK/POOP/BRUSH/CUT` to `ADX_PARK/POOP/BRUSH/CUT` (AFC_IFS.py, registered at connect and swapped into AFC's park/poop/wipe/tool_cut command settings)
+- Not caught earlier because the commands had never run by name since the rename from `IFS_*`; the old names worked
+
+## Unload copies stock; AFC is only the framework (2026-10-25)
+
+- Second T1 (after the ADX_ rename): cut and park ran, but the fill sensor stayed blocked through AFC's four 60 mm extruder retracts. Pulling the lane 1 filament out by hand cleared the sensor (0.007 -> 0.317), so the sensor sits on the lane side of the cutter and only the IFS retracting the lane clears it. The cut worked (confirmed by hand)
+- Stock unload, read from the binary with Ghidra (string literals in instruction order, `scratchpad re-out`): `cutFilament` = `fourInOneCut`, `G92 E0`, then `F11 C<lane> L60 S<n>` sent to the IFS FIRST and `G1 E-60 F<n>` straight after (they overlap). `<n>` is `getFilamentTypeUnloadSpeed`: 600 mm/min for PLA and ordinary types, 200 or 300 for two special types and SILK; the distance is `getFilamentTypeUnloadSpace`, a constant 60
+- Then `checkFourInOneUnLoad` -> `fourInOneUnLoad` (a state machine polling the IFS with F13 every 200 ms): when the IFS is idle it re-clamps the lane (`checkCrotchCutting`, F24) and sends `F11 C<lane> L70 S600`, and while `checkFilamentSenser` still reads filament it sends `F11 C<lane> L70 S600` again, until the IFS reports done or 'Unload timeOut!'. It never retries with the extruder. Other `F11` strings in the binary: `L50 S` in `doLoadAndUnload`; feeds use `F10 ... L1000 S`
+- The global `UnloadESpace` 60 / `UnloadIFSSpace` 70 / `UnloadSpeed` 600 in Adventurer5M.json are only read by `initMulticolourConfig` and the `FourToOne::*DelayTime` estimators, not used as command lengths
+- Total lane retract in stock = 60 + 70 (+70 per retry) at 600 mm/min = 10 mm/s
+- AFC does the opposite (extruder retries up to `tool_max_unload_attempts`, then its own blind `dist_hub` lane retract), and the lane-to-extruder sync stays off because the idle IFS motor braked the strand
+- `AFC_IFS._stock_unload`, run at the end of `ADX_CUT` (written with the stock numbers above, NOT run yet): chute park, lane back 60 mm at 10 mm/s, extruder back 60 mm at 10 mm/s, lane back 70 mm, then lane back 70 mm again (max `unload_ifs_retries` 3) while the sensor reads filament. AFC's own later lane retract is skipped once per unload (`_skip_hub_retract`, cleared by the `TOOL_UNLOAD` wrapper), and `tool_max_unload_attempts: 0` so AFC raises its error instead of retracting the extruder again
+- Lane and extruder retracts run back to back, not at the same instant: `AFC_stepper._move(sync=False)` can drop the move when the motion queue wipes its trapq, and after the cut the two pieces are independent anyway
